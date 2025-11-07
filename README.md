@@ -22,7 +22,7 @@ Built with a **React.js frontend** and **FastAPI backend**, fully containerized 
 | Layer | Technology |
 |-------|-------------|
 | **Frontend** | React.js|
-| **Backend** | FastAPI, Python, Uvicorn |
+| **Backend** | FastAPI|
 | **AI Integration** | OpenAI LLM (GPT models) |
 | **Containerization** | Docker, Docker Compose |
 | **Deployment** | Private VPS (Ubuntu/Linux), Nginx Reverse Proxy |
