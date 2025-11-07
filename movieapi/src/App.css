@@ -1,0 +1,186 @@
+/* ====== Global Reset ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ====== Body ====== */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(145deg, #f9fafc 0%, #e3e8f0 100%);
+  color: #1e293b;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* ====== Main Container ====== */
+.appContainer {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px 50px;
+  width: 100%;
+  max-width: 780px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* ====== Header ====== */
+.appHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.appHeader h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #007aff, #00b7c2);
+
+  /* ✅ Proper prefix + fallback */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  /* Fallback for non-WebKit browsers */
+  @supports not ((-webkit-background-clip: text)) {
+    color: #007aff;
+  }
+}
+
+.appHeader p {
+  color: #475569;
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ====== Input + Button Section ====== */
+.inputSection {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.inputSection input {
+  flex: 1;
+  min-width: 240px;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  outline: none;
+  background-color: #f8fafc;
+  transition: all 0.3s ease;
+}
+
+.inputSection input:focus {
+  border-color: #007aff;
+  box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.15);
+  background-color: white;
+}
+
+.inputSection button {
+  background: linear-gradient(90deg, #007aff, #00b7c2);
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.inputSection button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* ====== Response Section ====== */
+.summaryOutput {
+  margin-top: 20px;
+}
+
+.summaryOutput h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.summaryBox {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px 24px;
+  line-height: 1.65;
+  color: #334155;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s ease-in-out;
+  animation: fadeInUp 0.6s ease-in-out;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.summaryBox p {
+  margin: 8px 0;
+  font-size: 0.98rem;
+}
+
+/* ====== Smooth Animations ====== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====== Loading State ====== */
+.loading {
+  color: #007aff;
+  font-weight: 500;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ====== Footer ====== */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+footer strong {
+  color: #007aff;
+}
