@@ -21,7 +21,7 @@ Built with a **React.js frontend** and **FastAPI backend**, fully containerized 
 
 | Layer | Technology |
 |-------|-------------|
-| **Frontend** | React.js, Axios, HTML5, TailwindCSS |
+| **Frontend** | React.js|
 | **Backend** | FastAPI, Python, Uvicorn |
 | **AI Integration** | OpenAI LLM (GPT models) |
 | **Containerization** | Docker, Docker Compose |
